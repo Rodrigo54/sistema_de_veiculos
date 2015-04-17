@@ -2,12 +2,12 @@ Sistema de Veiculos
 ===========
 
 8 – Implementar o Sistema de Veículos com as seguintes funcionalidades:
-a) busca sequencial
-b) busca binária
-c) ordenação por Seleção
-d) ordenação por Inserção
-e) ordenação por QuickSort
-f) ordenação por MergSort
+  * busca sequencial
+  * busca binária
+  * ordenação por Seleção
+  * ordenação por Inserção 
+  * ordenação por QuickSort
+  * ordenação por MergSort
 
 
 Atividade feita para obtenção de nota parcial na mateira de `Algoritmos e Estrutura de Dados 2`.
