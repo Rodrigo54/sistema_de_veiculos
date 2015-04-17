@@ -1,6 +1,6 @@
 Sistema de Veiculos
 ===========
-Atividade feita para obtenção de nota parcial na mateira de `Algoritmos e Estrutura de Dados 2`.
+Atividade feita para obtenção de nota parcial na materia de `Algoritmos e Estrutura de Dados 2`.
 
 ````````
 8 – Implementar o Sistema de Veículos com as seguintes funcionalidades:
