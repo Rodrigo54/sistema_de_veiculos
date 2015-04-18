@@ -1,13 +1,13 @@
 /**
- *  @package SISTEMA DE VEICULOS
+ * @name SISTEMA DE VEICULOS
  *
- *  8 – Implementar o Sistema de Veículos com as seguintes funcionalidades:
- *  a) busca sequencial
- *  b) busca binária
- *  c) ordenação por Seleção
- *  d) ordenação por Inserção
- *  e) ordenação por QuickSort
- *  f) ordenação por MergSort
+ * @todo Implementar o Sistema de Veículos com as seguintes funcionalidades:
+ * a) busca sequencial
+ * b) busca binária
+ * c) ordenação por Seleção
+ * d) ordenação por Inserção
+ * e) ordenação por QuickSort
+ * f) ordenação por MergSort
  *
  * @author Rodrigo Alves Mesquita <rodrigo54mix@gmail.com>
  * @author Jônatas Rodrigues de Souza <jonatasrodrigues03@gmail.com>
@@ -16,18 +16,18 @@
  * @author Wallison Freitas de Oliveira <wallisonfreitas00@gmail.com>
  *
  * @link http://www.github.com/rodrigo54
- * @version 0.1
+ * @version 0.5
  * @date 5 Abr 2015
  * @copyright 2015 by Rodrigo Alves Mesquita
  * @file main.c
- */
+**/
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 #include <conio.h>
 #include "biblioteca_sistema_veiculo.h"
-#define MAX 2
+#define MAX 2 //MAX recebe o valor de 2 inteiros
 
 int main(){
     int opcao,i,buscar,posicao;

@@ -1,13 +1,13 @@
 /**
- *  @package SISTEMA DE VEICULOS
+ * @name SISTEMA DE VEICULOS
  *
- *  8 – Implementar o Sistema de Veículos com as seguintes funcionalidades:
- *  a) busca sequencial
- *  b) busca binária
- *  c) ordenação por Seleção
- *  d) ordenação por Inserção
- *  e) ordenação por QuickSort
- *  f) ordenação por MergSort
+ * @todo Implementar o Sistema de Veículos com as seguintes funcionalidades:
+ * a) busca sequencial
+ * b) busca binária
+ * c) ordenação por Seleção
+ * d) ordenação por Inserção
+ * e) ordenação por QuickSort
+ * f) ordenação por MergSort
  *
  * @author Rodrigo Alves Mesquita <rodrigo54mix@gmail.com>
  * @author Jônatas Rodrigues de Souza <jonatasrodrigues03@gmail.com>
@@ -16,17 +16,19 @@
  * @author Wallison Freitas de Oliveira <wallisonfreitas00@gmail.com>
  *
  * @link http://www.github.com/rodrigo54
- * @version 0.1
+ * @version 0.5
  * @date 5 Abr 2015
  * @copyright 2015 by Rodrigo Alves Mesquita
  * @file biblioteca_sistema_veiculo.c
- */
+**/
 
 #include <string.h>
 #include "biblioteca_sistema_veiculo.h"
 
-// função quick sort
-int particao(struct veiculo *a, int pini, int pfim ){
+/** @name Ordenação Quicksort
+ *  @note Leia mais em biblioteca_sistema_veiculo.h
+**/
+int particao(struct veiculo *a, int pini, int pfim){
    int i,j;
    struct veiculo pivo, temp;
    i = pini;
@@ -47,9 +49,8 @@ int particao(struct veiculo *a, int pini, int pfim ){
    }
    a[pini]=a[j];
    a[j]=pivo;
-
-         return j;
-      }
+   return j;
+}
 
 void quickSort(struct veiculo *a, int pini, int pfim ){
    int pivot;
@@ -60,8 +61,12 @@ void quickSort(struct veiculo *a, int pini, int pfim ){
       quickSort(a, pivot+1, pfim);
    }
 }
+/********* END Ordenação Quicksort **********/
 
-// Função de ordenação por seleção
+
+/** @name Ordenação por Seleção
+ *  @note Leia mais em biblioteca_sistema_veiculo.h
+**/
 void select_sort(struct veiculo *a, int tam){
      int i, j, k, troca;
      struct veiculo tmp;
@@ -85,34 +90,45 @@ void select_sort(struct veiculo *a, int tam){
      }
 }
 
-// Função de Ordenação por Inserção
+/** @name Ordenação por Inserção
+ *  @note Leia mais em biblioteca_sistema_veiculo.h
+**/
 void insertion_sort(struct veiculo *a, int tam){
     int i, j;
     struct veiculo tmp;
 
     for(i = 1; i < tam; i++){
         tmp = a[i];
+        /* strcmp é uma função da biblioteca string.h que compara strings
+         * strcmp(string1 , string2) ela retorna:
+         * menor que zero se string1 vier primeiro que string2 no dicionario;
+         * igual a zero se string1 e string2 são iguais;
+         * maior que zero se string1 vier depois que string2 no dicionario.
+         */
         for(j = i-1; j >= 0 && strcmp(tmp.marca , a[j].marca)<0; j--){
             a[j+1] = a[j];
-    }
+        }
     a[j+1] = tmp;
     }
 }
 
-/* Busca Sequencial por ano*/
-int busca_sequ (struct veiculo *a, int tam, int elem){
+/** @name Busca Sequencial
+ *  @note Leia mais em biblioteca_sistema_veiculo.h
+**/
+int busca_sequ(struct veiculo *a, int tam, int elem){
     int i;
     for (i=0; i<tam; i++) {
         if (elem == a[i].ano)
-        return i; /* encontrou */
+        return i; // encontrou
     else if (elem < a[i].ano)
-        return -1;/* interrompe busca */
+        return -1;//interrompe busca
     }
-    /* não encontrou */
-    return -1;
+    return -1;//não encontrou
 }
 
-/* Busca Binaria*/
+/** @name Busca Binária
+ *  @note Leia mais em biblioteca_sistema_veiculo.h
+**/
 int busca_bin(struct veiculo *a, int tam, int valor){
     int ini, fim, meio;
 
@@ -136,10 +152,10 @@ int busca_bin(struct veiculo *a, int tam, int valor){
     return -1;
 }
 
-// Função Mergesort
-
-void intercala(struct veiculo *a,int ini, int meio,int fim,struct veiculo *aux)
-{
+/** @name Ordenação Mergesort
+ *  @note Leia mais em biblioteca_sistema_veiculo.h
+**/
+void intercala(struct veiculo *a,int ini, int meio, int fim, struct veiculo *aux){
     int i = ini, j = meio + 1, k = 0;
 
     while(i <= meio && j <= fim){
@@ -160,8 +176,8 @@ void intercala(struct veiculo *a,int ini, int meio,int fim,struct veiculo *aux)
         a[i]=aux[k];
     }
 }
-void mergeSort (struct veiculo *a, int esq, int dir,struct veiculo *aux)
-{
+
+void mergeSort(struct veiculo *a, int esq, int dir, struct veiculo *aux){
     int meio;
 
     if(esq < dir){
@@ -171,4 +187,4 @@ void mergeSort (struct veiculo *a, int esq, int dir,struct veiculo *aux)
         intercala(a,esq,meio,dir,aux);
     }
 }
-
+/********* END Ordenação Mergesort **********/
