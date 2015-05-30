@@ -19,6 +19,6 @@ O Progama foi feito em **linguagem C** na IDE Code::Blocks
 
 ## Autor
 
-Criado por [Rodrigo Alves Mesquita](https://www.linkedin.com/pub/rodrigo-mesquita/90/572/40a)
+Criado por [Rodrigo Alves Mesquita](https://www.linkedin.com/pub/rodrigo-mesquita/90/572/40a) :smile:
 
 Aluno do 4° periodo do curso de `Bacharel em Ciências da Computação` na [Faculdade Pitágoras](http://www.faculdadepitagoras.com.br/)
