@@ -1,5 +1,8 @@
 Sistema de Veiculos
 ===========
+[![Build Status](https://img.shields.io/travis/joyent/node/v0.6.svg)]()
+[![Version 0.5](https://img.shields.io/badge/version%20-0.5-blue.svg)]()
+
 Atividade feita para obtenção de nota parcial na materia de `Algoritmos e Estrutura de Dados 2`.
 
 ````````
