@@ -42,7 +42,7 @@ steps:
     displayName: 'Create GitHub Release'
     inputs:
       gitHubConnection: GithubRodrigo54
-      repositoryName: Rodrigo54/sistema_de_veiculo
+      repositoryName: Rodrigo54/sistema_de_veiculos
       tagSource: manual
       tag: $(Build.BuildNumber)
       assets: |
